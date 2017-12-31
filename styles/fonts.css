@@ -1,0 +1,29 @@
+@font-face {
+	font-family: montserrat-light;
+	src: url(../fonts/Montserrat-Light.otf);
+}
+
+@font-face {
+	font-family: montserrat-regular;
+	src: url(../fonts/Montserrat-Regular.otf);
+}
+
+@font-face {
+	font-family: montserrat-bold;
+	src: url(../fonts/Montserrat-Bold.otf);
+}
+
+@font-face {
+	font-family: playfairDisplay-italic;
+	src: url(../fonts/PlayfairDisplay-Italic.otf);
+}
+
+@font-face {
+	font-family: playfairDisplay-bold;
+	src: url(../fonts/PlayfairDisplay-Bold.otf);
+}
+
+@font-face {
+	font-family: playfairDisplay-regular;
+	src: url(../fonts/PlayfairDisplay-Regular.otf);
+}

@@ -1,0 +1,293 @@
+$hoverColor = #00B0FF;
+$blackColor = #000;
+$whiteColor = #fff;
+$allTransition = all .3s ease;
+*
+	box-sizing border-box
+
+body
+	font-family  Arial, montserrat-regular sans-serif
+	margin 0
+
+.main-content
+	height 100%
+	margin 0 auto
+	min-height 100vh
+	width 100%
+
+a
+	text-decoration none
+
+ul
+	list-style none
+	padding 0
+
+h1, h2, h3, h4
+	margin 0
+
+.wrapper-section
+	max-width 1200px
+	margin 0 auto
+	width 100%
+
+.background-head
+	background url(../images/bg-header.png) no-repeat center top
+	background-position cover
+	padding 30px 15px
+
+.header
+	align-items center
+	display flex
+	flex-direction row
+	flex-wrap wrap
+	justify-content space-between
+	
+	width 100%
+
+.nav ul
+	display flex
+	flex-direction row
+
+.nav-bar ul li
+	margin 0 10px
+
+.nav-bar ul a
+	border-radius 8px
+	color $blackColor
+	display block
+	padding 5px 10px
+	text-transform uppercase
+	transition $allTransition
+
+.nav-bar ul a:hover
+	background $hoverColor
+	color $whiteColor
+
+.nav-bar-mobile
+	display none
+
+.nav-bar-mobile .navbar-show
+	background $whiteColor
+	border-radius 50%
+	color $blackColor
+	cursor pointer
+	display block
+	font-weight bold
+	height 35px
+	line-height 35px
+	text-align center
+	transition $allTransition
+	width 35px
+	
+.nav-bar-mobile .navbar-show:hover
+	background $hoverColor
+	color $whiteColor
+
+.nav-bar-mobile .navbar-hide
+	background $whiteColor
+	border 2px solid $hoverColor
+	border-radius 50%
+	color $blackColor
+	cursor pointer
+	font-size 30px
+	display block
+	font-weight bold
+	height 60px
+	line-height 58px
+	padding 0
+	text-align center
+	transition $allTransition
+	width 60px
+	
+.nav-bar-mobile .navbar-hide:hover
+	background $hoverColor
+	border 2px solid $whiteColor
+	color $whiteColor
+
+.nav-menu-mobile
+	background $hoverColor
+	display none
+	left 0
+	min-height 100%
+	height 100vh
+	position fixed
+	transition $allTransition
+	top 0
+	width 100%
+	z-index 1002px
+
+.nav-menu-mobile ul 
+	align-items center
+	display flex
+	flex-direction column
+	justify-content center
+	
+	left 50%
+	position absolute
+	transform translate(-50%, -50%)
+	top 40%
+
+.nav-menu-mobile ul a
+	border-radius 8px
+	color $blackColor
+	font-size 24px
+	display block
+	margin 5px 0
+	padding 10px 25px
+	text-transform uppercase
+	transition $allTransition
+
+.nav-menu-mobile ul a:hover
+	background $whiteColor
+	color $hoverColor
+
+.social-bar ul li
+	margin 0 5px
+
+.social-bar ul a
+	background $whiteColor
+	border-radius 50%
+	color $blackColor
+	display block
+	font-weight bold
+	height 35px
+	line-height 35px
+	text-align center
+	transition $allTransition
+	width 35px
+
+.social-bar ul a:hover
+	background $hoverColor
+	color $whiteColor
+
+.slogan-container
+	font-family playfairDisplay-italic
+	margin 145px 0
+	padding-bottom 20px
+	text-align center
+
+.slogan-container h1
+	font-size 50px
+
+.slogan-container span
+	color #fff
+	font-size 24px
+
+.container-boards
+	background #fff
+	box-shadow: 0px 0px 27px 0px rgba(0,0,0,0.35)
+	height 100%
+	margin 0 auto
+	max-width 1030px
+	width 100%
+
+.sliderboard-container
+	align-items center
+	display flex
+	flex-direction row
+	justify-content space-between
+	
+	max-width 570px
+	width 100%
+
+.slideshow-container
+	background #fff url(../images/bg-slide-img.png) no-repeat left top
+	height 100%
+	max-width 500px
+	position relative
+	width 100%
+	z-index 999
+
+.slideshow-container img
+	width 100%
+
+.dots-board
+	z-index 1000
+	
+.dot-board
+	background #fff url(../images/sprite-boards.png) no-repeat
+	border 1px solid #ccc
+	cursor pointer
+	display block
+	height 70px
+	margin 0 0 3px -35px
+	width 70px
+	transition $allTransition
+
+.dot-board:nth-child(1) 
+	background-size 450%
+	background-position 3px -7px
+
+.dot-board:nth-child(2) 
+	background-size 450%
+	background-position 3px -7px
+
+.dot-board:nth-child(3) 
+	background-size 450%
+	background-position 3px -7px
+
+.dot-board:nth-child(4) 
+	background-size 450%
+	background-position 3px -7px
+	
+
+.active, .dot-board:hover
+	border 3px solid $hoverColor
+
+.fade
+	animation-name fade
+	animation-duration  1.5s
+
+@keyframes fade
+	from
+		opacity .4
+	to
+		opacity 1
+
+
+
+@media only screen and (max-width 1060px)
+	.header .logo
+		width 100%
+
+	.logo img
+		display block
+		margin 0 auto
+
+@media only screen and (max-width 880px)
+	.background-head
+		padding 10px 15px
+
+	.header
+		flex-direction row-reverse
+
+	.header .logo
+		width 100%
+		order 3
+
+	.nav-bar
+		display none
+
+	.nav-bar-mobile
+		display block
+
+	.slogan-container h1
+		font-size 38px
+
+@media only screen and (max-width 616px)
+	.sliderboard-container
+		align-items flex-start
+		flex-direction column
+
+	.dots-board
+		align-items center
+		display flex
+		flex-direction row
+		justify-content center
+		
+		width 100%
+
+	.dot-board
+		margin 10px 10px
+		
+		
